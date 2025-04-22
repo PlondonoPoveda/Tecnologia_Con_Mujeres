@@ -71,7 +71,8 @@ nav a {
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 300%;
+    width: 40%;
+    margin: auto;
 }
 
 .slide {
