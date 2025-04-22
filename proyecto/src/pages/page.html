@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,14 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="styles-heet">
 
 </head>
+
 <body>
-   <!-- NAVBAR -->
-   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">TecMujeres</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
+
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
@@ -52,41 +51,42 @@
 
     <!-- Carrusel de fondo del encabezado -->
     <div class="slider">
-        <div class="slides" id="slides">
-          <div class="slide"><img src="../img/carrusel_1.png" alt="Slide 1"></div>
-          <div class="slide"><img src="../img/carrusel_2.png" alt="Slide 2"></div>
-          <div class="slide"><img src="../img/carrusel_3.png" alt="Slide 3"></div>
-        </div>
-        <div class="nav-buttons">
-          <button onclick="prevSlide()">&#10094;</button>
-          <button onclick="nextSlide()">&#10095;</button>
-        </div>
+      <div class="slides" id="slides">
+        <div class="slide"><img src="../img/carrusel_1.png" alt="Slide 1"></div>
+        <div class="slide"><img src="../img/carrusel_2.png" alt="Slide 2"></div>
+        <div class="slide"><img src="../img/carrusel_3.png" alt="Slide 3"></div>
+      </div>
+      <div class="nav-buttons">
+        <button onclick="prevSlide()">&#10094;</button>
+        <button onclick="nextSlide()">&#10095;</button>
+      </div>
     </div>
-       <!-- Scropt para funcionamiento de carrusel -->
+
+    <!-- Scropt para funcionamiento de carrusel -->
     <script>
-    let currentSlide = 0;
-    const slides = document.getElementById("slides");
-    const totalSlides = slides.children.length;
+      let currentSlide = 0;
+      const slides = document.getElementById("slides");
+      const totalSlides = slides.children.length;
 
-    function updateSlide() {
+      function updateSlide() {
         slides.style.transform = `translateX(-${currentSlide * 100}%)`;
-    }
+      }
 
-    function nextSlide() {
+      function nextSlide() {
         currentSlide = (currentSlide + 1) % totalSlides;
         updateSlide();
-    }
+      }
 
-    function prevSlide() {
+      function prevSlide() {
         currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
         updateSlide();
-    }
+      }
 
-    setInterval(nextSlide, 9000);
+      setInterval(nextSlide, 9000);
     </script>
 
   </header>
-  
+
   <!---
   <nav>
     <ul>
@@ -122,84 +122,100 @@
         <h2>Proyectos Destacados</h2>
         <p>Conoce plataformas, aplicaciones y programas educativos creados por y para mujeres.</p>
         <div class="container">
-            <div class="card">
-              <img src="../img/girls_code_.png" alt="Noticia" style="width: 100%; height: auto;">
-              <div class="card-content">
-                <div class="card-title">Girls Who Code</div>
-                <div class="card-text">Es una organización sin fines de lucro que busca reducir la brecha de género en tecnología, formando a mujeres jóvenes y personas no binarias en habilidades informáticas,  su objetivo es aumentar la presencia femenina en informática y STEM.
-                    <p>Fundadora: <strong>Reshma Saujani</strong>.</p>
-                </div>
-               <a href="https://girlswhocode.com/" class="card-button" target="_blank">Leer más</a>
+          <div class="card">
+            <img src="../img/girls_code_.png" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Girls Who Code</div>
+              <div class="card-text">Es una organización sin fines de lucro que busca reducir la brecha de género en
+                tecnología, formando a mujeres jóvenes y personas no binarias en habilidades informáticas, su objetivo
+                es aumentar la presencia femenina en informática y STEM.
+                <p>Fundadora: <strong>Reshma Saujani</strong>.</p>
               </div>
+              <a href="https://girlswhocode.com/" class="card-button" target="_blank">Leer más</a>
             </div>
-        
-            <div class="card">
-              <img src="../img/laboratoria.jpg" alt="Noticia" style="width: 100%; height: auto;">
-              <div class="card-content">
-                <div class="card-title">Laboratoria (Latinoamérica)</div>
-                <div class="card-text">Laboratoria es una organización de impacto social que busca empoderar a mujeres en Latinoamérica a través de la educación en tecnología. Su objetivo es construir una economía digital más diversa e inclusiva, brindando a las mujeres la oportunidad de desarrollarse profesionalmente en el sector tecnológico.
-                    <p>Fundadora: <strong>Mariana Costa Checa</strong>.</p>
-                </div>
-                <a href="https://www.laboratoria.la/" class="card-button" target="_blank">Leer más</a>
-              </div>
-            </div>
-        
-            <div class="card">
-                <img src="../img/black_girls.png" alt="Noticia" style="width: 100%; height: auto;">
-                <div class="card-content">
-                  <div class="card-title">Black Girls Code</div>
-                  <div class="card-text">Es una organización sin fines de lucro que se enfoca en empoderar a niñas y jóvenes negros y de otras minorías raciales a través de la educación en informática y tecnología. Su objetivo es cerrar la brecha de género y racial en la industria tecnológica, promoviendo la diversidad y la inclusión. BGC ofrece talleres, programas extraescolares y de verano donde las niñas aprenden a codificar, desarrollar aplicaciones móviles, robótica y otras tecnologías. 
-                      <p>Fundadora: <strong>Kimberly Bryant</strong>.</p>
-                  </div>
-                  <a href="https://www.wearebgc.org/" class="card-button" target="_blank">Leer más</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="../img/technovation_.png" alt="Noticia" style="width: 100%; height: auto;">
-                <div class="card-content">
-                  <div class="card-title">Technovation Girls</div>
-                  <div class="card-text">Es un programa global que empodera a niñas y jóvenes (de 8 a 18 años) para que se conviertan en emprendedoras y líderes tecnológicas. A través de este programa, las niñas aprenden a resolver problemas de su comunidad utilizando la tecnología, desarrollando aplicaciones o soluciones basadas en IA, y creando un plan de negocios
-                      <p>Fundadora: <strong>Tara Chklovski</strong>.</p>
-                  </div>
-                  <a href="https://technovationchallenge.org/" class="card-button" target="_blank">Leer más</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="../img/clue.png" alt="Noticia" style="width: 100%; height: auto;">
-                <div class="card-content">
-                  <div class="card-title">Clue </div>
-                  <div class="card-text">Es una aplicación de salud femenina, específicamente diseñada para el seguimiento del ciclo menstrual, salud reproductiva y embarazo.
-                      <p>Fundadora: <strong>Ida Tin</strong>.</p>
-                  </div>
-                  <a href="https://helloclue.com/es" class="card-button" target="_blank">Leer más</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="../img/peppy.png" alt="Noticia" style="width: 100%; height: auto;">
-                <div class="card-content">
-                  <div class="card-title">Peppy</div>
-                  <div class="card-text">Es una plataforma de salud digital y beneficios para empleados que se enfoca en proporcionar apoyo holístico para la salud, el bienestar y el desarrollo personal de los empleados, especialmente en áreas como la salud.
-                      <p>Fundadora: <strong> Mridula Pore, Evan Harris y Max Landry</strong>.</p>
-                  </div>
-                  <a href="https://peppy.health/" class="card-button" target="_blank">Leer más</a>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="../img/mujeres_tic.png" alt="Noticia" style="width: 100%; height: auto;">
-                <div class="card-content">
-                  <div class="card-title">Mujeres TIC</div>
-                  <div class="card-text">Es un programa que promueve el liderazgo femenino mediante una oferta de capacitación virtual, gratuita y certificable para todas las mujeres de Colombia.
-                      <p>Fundadora: <strong>MinTic</strong>.</p>
-                  </div>
-                  <a href="https://www.mujerestic.org/" class="card-button" target="_blank">Leer más</a>
-                </div>
-            </div>
-
           </div>
+
+          <div class="card">
+            <img src="../img/laboratoria.jpg" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Laboratoria (Latinoamérica)</div>
+              <div class="card-text">Laboratoria es una organización de impacto social que busca empoderar a mujeres en
+                Latinoamérica a través de la educación en tecnología. Su objetivo es construir una economía digital más
+                diversa e inclusiva, brindando a las mujeres la oportunidad de desarrollarse profesionalmente en el
+                sector tecnológico.
+                <p>Fundadora: <strong>Mariana Costa Checa</strong>.</p>
+              </div>
+              <a href="https://www.laboratoria.la/" class="card-button" target="_blank">Leer más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../img/black_girls.png" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Black Girls Code</div>
+              <div class="card-text">Es una organización sin fines de lucro que se enfoca en empoderar a niñas y jóvenes
+                negros y de otras minorías raciales a través de la educación en informática y tecnología. Su objetivo es
+                cerrar la brecha de género y racial en la industria tecnológica, promoviendo la diversidad y la
+                inclusión. BGC ofrece talleres, programas extraescolares y de verano donde las niñas aprenden a
+                codificar, desarrollar aplicaciones móviles, robótica y otras tecnologías.
+                <p>Fundadora: <strong>Kimberly Bryant</strong>.</p>
+              </div>
+              <a href="https://www.wearebgc.org/" class="card-button" target="_blank">Leer más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../img/technovation_.png" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Technovation Girls</div>
+              <div class="card-text">Es un programa global que empodera a niñas y jóvenes (de 8 a 18 años) para que se
+                conviertan en emprendedoras y líderes tecnológicas. A través de este programa, las niñas aprenden a
+                resolver problemas de su comunidad utilizando la tecnología, desarrollando aplicaciones o soluciones
+                basadas en IA, y creando un plan de negocios
+                <p>Fundadora: <strong>Tara Chklovski</strong>.</p>
+              </div>
+              <a href="https://technovationchallenge.org/" class="card-button" target="_blank">Leer más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../img/clue.png" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Clue </div>
+              <div class="card-text">Es una aplicación de salud femenina, específicamente diseñada para el seguimiento
+                del ciclo menstrual, salud reproductiva y embarazo.
+                <p>Fundadora: <strong>Ida Tin</strong>.</p>
+              </div>
+              <a href="https://helloclue.com/es" class="card-button" target="_blank">Leer más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../img/peppy.png" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Peppy</div>
+              <div class="card-text">Es una plataforma de salud digital y beneficios para empleados que se enfoca en
+                proporcionar apoyo holístico para la salud, el bienestar y el desarrollo personal de los empleados,
+                especialmente en áreas como la salud.
+                <p>Fundadora: <strong> Mridula Pore, Evan Harris y Max Landry</strong>.</p>
+              </div>
+              <a href="https://peppy.health/" class="card-button" target="_blank">Leer más</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <img src="../img/mujeres_tic.png" alt="Noticia" style="width: 100%; height: auto;">
+            <div class="card-content">
+              <div class="card-title">Mujeres TIC</div>
+              <div class="card-text">Es un programa que promueve el liderazgo femenino mediante una oferta de
+                capacitación virtual, gratuita y certificable para todas las mujeres de Colombia.
+                <p>Fundadora: <strong>MinTic</strong>.</p>
+              </div>
+              <a href="https://www.mujerestic.org/" class="card-button" target="_blank">Leer más</a>
+            </div>
+          </div>
+
+        </div>
       </div>
 
       <div id="comunidades">
@@ -208,19 +224,176 @@
       </div>
 
       <div id="datos">
-        <h2>Datos e Impacto</h2>
-        <p>Estadísticas sobre participación femenina en ciencia y tecnología.</p>
+        <h2>Estadisticas mujeres graduadas en carreras tecnológicas (2001 - 2023)</h2>
+        <canvas id="graficoEmprendimiento"></canvas><!--Es como una hoja de papel en blanco-->
+        <script> 
+          document.addEventListener("DOMContentLoaded", function() {
+          fetch('../resources/datos_emprendimiento.csv')
+            .then(response => response.text())
+            .then(data => {
+              console.log(data); // Verifica los datos cargados
+              const filas = data.trim().split('\n').slice(1);
+              const labels = [];
+              const valores = [];
+        
+              filas.forEach(fila => {
+                const [anio, cantidad] = fila.split(',');
+                labels.push(anio);
+                valores.push(Number(cantidad));
+              });
+        
+              const ctx = document.getElementById('graficoEmprendimiento').getContext('2d');
+              new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  labels: labels,
+                  datasets: [{
+                    label: 'Cantidad de emprendimientos',
+                    data: valores,
+                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                    borderColor: 'rgb(196, 235, 54)',
+                    borderWidth: 1
+                  }]
+                },
+                options: {
+                  responsive: true,
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            })
+            .catch(error => console.error('Error al cargar el archivo CSV:', error));
+        });
+        </script>
       </div>
 
       <div id="graficos">
-        <h2>Visualizaciones</h2>
-        <p>Gráficas que muestran el avance de mujeres en áreas STEM y emprendimientos tecnológicos.</p>
+        <h2>Visuaciones</h2>
+        <p style="margin-bottom: 10px;">Gráficas que muestran el avance de mujeres en áreas STEM y emprendimientos
+          tecnológicos.</p>
+        <div class="card">
+          <img src="../img/grafico.png" alt="Noticia" style="width: 100%; height: auto;">
+          <div class="card-content">
+            <div class="card-title"> Dónde trabajan (o no) las mujeres en STEM</div>
+            <div class="card-text">Un promedio del 40% de la fuerza laboral en STEM está ocupada por mujeres, según las
+              estimaciones más recientes de la Organización Internacional del Trabajo, basadas en un análisis de 84
+              países. Mongolia (57%), Bielorrusia (54%), Lesoto (52%) y Estados Unidos (52%) se encontraban entre los
+              países con mayor representación femenina en estos puestos, mientras que los Emiratos Árabes Unidos (23%),
+              Burkina Faso (20%) e Irak (17%) se encontraban en el otro extremo del espectro.
+
+              Según la OIT, aún existen grandes disparidades en ciertas ocupaciones dentro del ámbito STEM, y las
+              mujeres siguen estando significativamente subrepresentadas en áreas como la ingeniería civil y el
+              desarrollo de software.
+              <p>Fuente: <strong>Statista. (2023). Share of women working in STEM fields 2023, by country [Gráfico]. En
+                  Statista. Recuperado el 21 de abril de 2025, de
+                  https://www.statista.com/statistics/1116527/share-women-stem-country/</strong>.</p>
+            </div>
+
+          </div>
+        </div>
       </div>
 
       <div id="participa">
         <h2>Formulario de Participación</h2>
         <p>¿Tienes un proyecto o deseas unirte? Cuéntanos más.</p>
+
+        <!-- Formulario de autoevaluación -->
+        <form id="evaluationForm">
+          <h1>Autoevaluación de Emprendedor e Innovador </h1>
+
+          <!-- Pregunta 1 -->
+          <div class="question">
+            <label>1. ¿Eres capaz de asumir riesgos calculados?</label>
+            <label><input type="radio" name="q1" value="3"> Siempre</label>
+            <label><input type="radio" name="q1" value="2"> A veces</label>
+            <label><input type="radio" name="q1" value="1"> Rara vez</label>
+          </div>
+
+          <!-- Pregunta 2 -->
+          <div class="question">
+            <label>2. ¿Buscas constantemente mejorar o innovar en tus ideas?</label>
+            <label><input type="radio" name="q2" value="3"> Siempre</label>
+            <label><input type="radio" name="q2" value="2"> A veces</label>
+            <label><input type="radio" name="q2" value="1"> Rara vez</label>
+          </div>
+
+          <!-- Pregunta 3 -->
+          <div class="question">
+            <label>3. ¿Tienes metas claras a corto, mediano y largo plazo?</label>
+            <label><input type="radio" name="q3" value="3"> Sí</label>
+            <label><input type="radio" name="q3" value="2"> Parcialmente</label>
+            <label><input type="radio" name="q3" value="1"> No</label>
+          </div>
+
+          <!-- Pregunta 4 -->
+          <div class="question">
+            <label>4. ¿Cómo enfrentas los fracasos?</label>
+            <label><input type="radio" name="q4" value="3"> Como aprendizaje</label>
+            <label><input type="radio" name="q4" value="2"> Me cuesta, pero sigo</label>
+            <label><input type="radio" name="q4" value="1"> Me desanimo fácilmente</label>
+          </div>
+
+          <!-- Pregunta 5 -->
+          <div class="question">
+            <label>5. ¿Qué tan bien manejas tu tiempo y recursos?</label>
+            <label><input type="radio" name="q5" value="3"> Muy bien</label>
+            <label><input type="radio" name="q5" value="2"> Aceptable</label>
+            <label><input type="radio" name="q5" value="1"> Mal</label>
+          </div>
+
+          <!-- Botón para evaluar -->
+          <button type="button" class="card-button" onclick="calcularResultado()">Evaluar</button>
+
+          <!-- Contenedor para mostrar el resultado -->
+          <div id="result"></div>
+        </form>
+
+        <!-- Script con la lógica de evaluación -->
+        <script>
+          function calcularResultado() {
+            let total = 0; // Puntuación total inicial
+            const preguntas = 5; // Número total de preguntas
+
+            // Recorremos cada pregunta
+            for (let i = 1; i <= preguntas; i++) {
+              // Obtenemos la respuesta seleccionada de cada pregunta
+              const seleccion = document.querySelector(`input[name="q${i}"]:checked`);
+
+              if (seleccion) {
+                total += parseInt(seleccion.value); // Sumamos el valor elegido
+              } else {
+                alert("Por favor responde todas las preguntas."); // Si falta una, alerta
+                return; // Salimos de la función
+              }
+            }
+
+            const resultado = document.getElementById("result"); // Obtenemos el div del resultado
+            let mensaje = ""; // Texto del mensaje final
+            let clase = ""; // Clase CSS según el resultado
+
+            // Evaluamos según el puntaje total
+            if (total >= 13) {
+              mensaje = "¡Excelente! Tienes un perfil altamente emprendedor e innovador. 💡👩🏻🥇💻🚀";
+              clase = "high"; // Alta puntuación
+            } else if (total >= 9) {
+              mensaje = "Vas por buen camino. ¡Sigue desarrollando tus habilidades! 🔧🛤️🥈📈";
+              clase = "medium"; // Media puntuación
+            } else {
+              mensaje = "Revisa tus motivaciones y trabaja en tu crecimiento personal. 🌱🔍🧭";
+              clase = "low"; // Baja puntuación
+            }
+
+            // Mostramos el resultado con animación y estilo
+            resultado.className = `show ${clase}`;
+            resultado.innerHTML = `<strong>Puntaje: ${total}/15</strong><br>${mensaje}`;
+          }
+        </script>
+
       </div>
+
     </section>
   </main>
 
@@ -228,6 +401,8 @@
     <p>&copy; 2025 Tecnología con Mujeres. Todos los derechos reservados.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -239,3 +239,121 @@ footer {
 .card-button:hover {
     background-color: #0056b3;
 }
+
+form {
+    background: #fff;
+    /* Fondo blanco del formulario */
+    padding: 30px;
+    /* Espaciado interno */
+    border-radius: 15px;
+    /* Bordes redondeados */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra externa */
+    max-width: 700px;
+    /* Ancho máximo del formulario */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+}
+
+h1 {
+    text-align: center;
+    /* Centra el título */
+    color: #2c3e50;
+    /* Color del texto */
+    margin-bottom: 30px;
+    /* Separación inferior */
+}
+
+.question {
+    margin-bottom: 25px;
+    /* Espacio entre preguntas */
+}
+
+.question label {
+    display: block;
+    /* Hace que la etiqueta ocupe toda la línea */
+    font-weight: 600;
+    /* Texto en negrita */
+    margin-bottom: 10px;
+    /* Espacio debajo de la pregunta */
+    color: #3b2e81;
+    /* Color del texto */
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    /* Espacio entre el botón y el texto */
+}
+
+button {
+    display: block;
+    /* El botón es un bloque */
+    margin: 30px auto 10px auto;
+    /* Centrado con márgenes */
+    padding: 12px 40px;
+    /* Tamaño del botón */
+    background-color: #3498db;
+    /* Color azul del botón */
+    color: white;
+    /* Texto blanco */
+    border: none;
+    /* Sin borde */
+    font-size: 16px;
+    /* Tamaño del texto */
+    border-radius: 30px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Sombra del botón */
+}
+
+button:hover {
+    background-color: #2980b9;
+    /* Color al pasar el mouse */
+}
+
+#result {
+    text-align: center;
+    /* Centra el texto del resultado */
+    font-size: 18px;
+    /* Tamaño del texto */
+    margin-top: 30px;
+    /* Espacio superior */
+    padding: 20px;
+    /* Espaciado interno */
+    background: linear-gradient(135deg, #c1bfff, #f7d8ff);
+    /* Fondo del resultado */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    opacity: 0;
+    /* Oculto por defecto */
+    transform: translateY(20px);
+    /* Posición inicial animada */
+    transition: all 0.4s ease;
+    /* Transición suave */
+}
+
+#result.show {
+    opacity: 1;
+    /* Aparece el resultado */
+    transform: translateY(0);
+    /* Se mueve a su lugar */
+}
+
+/* Colores para diferentes niveles de resultado */
+.high {
+    color: #27ae60;
+}
+
+/* Verde para alta puntuación */
+.medium {
+    color: #f39c12;
+}
+
+/* Naranja para puntuación media */
+.low {
+    color: #e74c3c;
+}
+
+/* Rojo para puntuación baja */
