@@ -248,10 +248,10 @@
                 data: {
                   labels: labels,
                   datasets: [{
-                    label: 'Cantidad de emprendimientos',
+                    label: 'Número de mujeres graduadas',
                     data: valores,
-                    backgroundColor: 'rgba(54, 162, 235, 0.5)',
-                    borderColor: 'rgb(196, 235, 54)',
+                    backgroundColor: 'rgb(139,52,135)',
+                    borderColor: 'rgb(139,52,135)',
                     borderWidth: 1
                   }]
                 },
@@ -394,6 +394,108 @@
 
       </div>
 
+      <div id="evaluador">
+        <h2>Autoevaluación Tecnológica</h2>
+        <p>Responde estas preguntas para conocerte mejor en el mundo tech:</p>
+      
+        <form>
+          <!-- Pregunta 1 -->
+          <div class="question">
+            <label>¿Te identificas como mujer en el sector tech?</label>
+              <label><input type="radio" name="q1" value="si"> Sí</label>
+              <label><input type="radio" name="q1" value="no"> No</label>
+          </div>
+      
+          <!-- Pregunta 2 -->
+          <div class="question">
+            <label>¿Cuál es tu nivel actual en tecnología?</label>
+              <label><input type="radio" name="q2" value="principiante"> Principiante</label>
+              <label><input type="radio" name="q2" value="intermedio"> Intermedio</label>
+              <label><input type="radio" name="q2" value="avanzado"> Avanzado</label>
+          </div>
+      
+          <!-- Pregunta 3 -->
+          <div class="question">
+            <label>¿Te interesa la programación?</label>
+              <label><input type="radio" name="q3" value="mucho"> Mucho</label>
+              <label><input type="radio" name="q3" value="poco"> Poco</label>
+              <label><input type="radio" name="q3" value="nada"> Nada</label>
+          </div>
+      
+          <!-- Pregunta 4 -->
+          <div class="question">
+            <label>¿Participas en comunidades tecnológicas?</label>
+              <label><input type="radio" name="q4" value="si"> Sí</label>
+              <label><input type="radio" name="q4" value="no"> No</label>
+          </div>
+      
+          <!-- Pregunta 5 -->
+          <div class="question">
+            <label>¿Has trabajado en proyectos tecnológicos?</label>
+              <label><input type="radio" name="q5" value="si"> Sí</label>
+              <label><input type="radio" name="q5" value="no"> No</label>
+          </div>
+      
+          <!-- Pregunta 6 -->
+          <div class="question">
+            <label>¿Te gustaría aprender sobre ciberseguridad, IA o datos?</label>
+              <label><input type="radio" name="q6" value="si"> Sí</label>
+              <label><input type="radio" name="q6" value="no"> No</label>
+          </div>
+      
+          <!-- Pregunta 7 -->
+          <div class="question">
+            <label>¿Consideras que hay igualdad de género en el mundo tech?</label>
+              <label><input type="radio" name="q7" value="si"> Sí</label>
+              <label><input type="radio" name="q7" value="no"> No</label>
+              <label><input type="radio" name="q7" value="en-progreso"> En progreso</label>
+          </div>
+      
+          <button type="submit" class="card-button">Evaluar</button>
+        </form>
+
+        <!-- Script con la lógica de evaluación -->
+        <script>
+          function calcularResultado() {
+            let total = 0; // Puntuación total inicial
+            const preguntas = 5; // Número total de preguntas
+
+            // Recorremos cada pregunta
+            for (let i = 1; i <= preguntas; i++) {
+              // Obtenemos la respuesta seleccionada de cada pregunta
+              const seleccion = document.querySelector(`input[name="q${i}"]:checked`);
+
+              if (seleccion) {
+                total += parseInt(seleccion.value); // Sumamos el valor elegido
+              } else {
+                alert("Por favor responde todas las preguntas."); // Si falta una, alerta
+                return; // Salimos de la función
+              }
+            }
+
+            const resultado = document.getElementById("result"); // Obtenemos el div del resultado
+            let mensaje = ""; // Texto del mensaje final
+            let clase = ""; // Clase CSS según el resultado
+
+            // Evaluamos según el puntaje total
+            if (total >= 13) {
+              mensaje = "¡Excelente! Tienes un perfil altamente emprendedor e innovador. 💡👩🏻🥇💻🚀";
+              clase = "high"; // Alta puntuación
+            } else if (total >= 9) {
+              mensaje = "Vas por buen camino. ¡Sigue desarrollando tus habilidades! 🔧🛤️🥈📈";
+              clase = "medium"; // Media puntuación
+            } else {
+              mensaje = "Revisa tus motivaciones y trabaja en tu crecimiento personal. 🌱🔍🧭";
+              clase = "low"; // Baja puntuación
+            }
+
+            // Mostramos el resultado con animación y estilo
+            resultado.className = `show ${clase}`;
+            resultado.innerHTML = `<strong>Puntaje: ${total}/15</strong><br>${mensaje}`;
+          }
+        </script>
+
+      </div>
     </section>
   </main>
 
