@@ -61,17 +61,18 @@ nav a {
 /* === CARRUSEL ===*/
 .slider {
     position: relative;
-    height: 450px;
-    margin-bottom: -35px;
+    height: 410px;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    margin: auto;
 }
 
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 
@@ -82,7 +83,6 @@ nav a {
 
 .slide img {
     width: 100%;
-    margin-top: -140px;
     height: auto;
     display: block;
 }
