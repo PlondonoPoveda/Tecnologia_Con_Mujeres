@@ -52,7 +52,6 @@ nav a {
     color: #444;
     text-decoration: none;
     font-weight: 600;
-    padding: 8px 16px;
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -85,6 +84,10 @@ nav a {
     width: 100%;
     height: auto;
     display: block;
+}
+
+.navbar-brand {
+    color: #2E0D4C !important;
 }
 
 .nav-buttons {
@@ -121,7 +124,7 @@ main {
 aside {
     flex: 1;
     min-width: 250px;
-    background-color: #ffffff;
+    background-color: #D0C6FF;
     border-radius: 12px;
     padding: 24px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
@@ -136,6 +139,8 @@ aside h2 {
     font-size: 1.2rem;
     color: #593f8c;
     margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
 }
 
 aside a {
@@ -456,4 +461,17 @@ label {
     padding: 0.2em 2em;
     font-size: 1em;
     font-weight: bold;
+}
+
+.img-aside {
+    border-radius: 25px;
+}
+
+.nav-link:hover {
+    background-color: #D0C6FF;
+    border-radius: 15px;
+}
+
+.img-logo-navbar {
+    width: 60px;
 }
