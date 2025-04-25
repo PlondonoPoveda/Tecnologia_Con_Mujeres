@@ -230,6 +230,7 @@ footer {
 .card-text {
     font-size: 14px;
     color: #555;
+    text-align: justify;
 }
 
 .card-button {
@@ -465,6 +466,8 @@ label {
 
 .img-aside {
     border-radius: 25px;
+    width: 90%;
+    margin-bottom: 10px;
 }
 
 .nav-link:hover {
@@ -474,8 +477,4 @@ label {
 
 .img-logo-navbar {
     width: 60px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> da5baf859566de69d992d3feecc97be0022b21f2
